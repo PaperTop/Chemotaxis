@@ -1,6 +1,5 @@
 Ions [] electrons = new Ions[6];
 Ions [] lithium = new Ions[3];
-Boolean charge = false;
 boolean power = true;
 int stage = 0;
 
@@ -23,7 +22,7 @@ void draw()
   battery();
   wires();
   accelerator();
-  //charge();
+  charge();
   for (int i = 0; i < electrons.length; i++) {
     electrons[i].move();
     electrons[i].show();
@@ -73,7 +72,18 @@ void accelerator() {
   text("Accelerate", 300, 55);
   fill(255);
 }
-
+void charge() {
+    if (mouseX > 425 && mouseX < 575 && mouseY > 25 && mouseY < 75 && mousePressed == true) {
+    fill(200, 200, 200);
+    power = true;
+  } else if (mouseX > 425 && mouseX < 575 && mouseY > 25 && mouseY < 75) {
+    fill(200, 200, 200);
+  }
+  rect(425, 25, 150, 50);
+  fill(0);
+  text("Charge", 500, 55);
+  fill(255);
+  }
 class Ions
 {
   int myX, myY;
@@ -108,6 +118,11 @@ class Ions
       strokeWeight(2);
       ellipse(myX, myY, 10, 10);
       strokeWeight(5);
+    }
+  }
+  void use() {
+    if(stage == 1){
+      
     }
   }
 }
