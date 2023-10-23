@@ -121,11 +121,6 @@ class Ions
       strokeWeight(5);
     }
   }
-  void use() {
-    //if(stage == 1){
-      
-    //}
-  }
 }
 
 
