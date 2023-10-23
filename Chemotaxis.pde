@@ -122,9 +122,9 @@ class Ions
     }
   }
   void use() {
-    if(stage == 1){
+    //if(stage == 1){
       
-    }
+    //}
   }
 }
 
